@@ -1,38 +1,5 @@
- document.addEventListener('DOMContentLoaded', function() {
-            const navToggle = document.querySelector('.nav-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            
-            navToggle.addEventListener('click', function() {
-                // Toggle the active class on both the button and the menu
-                this.classList.toggle('active');
-                navLinks.classList.toggle('active');
-                
-                // Update ARIA attributes for accessibility
-                const isExpanded = navLinks.classList.contains('active');
-                this.setAttribute('aria-expanded', isExpanded);
-                this.setAttribute('aria-label', isExpanded ? 'Close navigation' : 'Open navigation');
-            });
-            
-            // Close the menu when clicking on a link (for mobile)
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', function() {
-                    navToggle.classList.remove('active');
-                    navLinks.classList.remove('active');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    navToggle.setAttribute('aria-label', 'Open navigation');
-                });
-            });
-            
-            // Close the menu when clicking outside (for mobile)
-            document.addEventListener('click', function(event) {
-                if (!navToggle.contains(event.target) && !navLinks.contains(event.target)) {
-                    navToggle.classList.remove('active');
-                    navLinks.classList.remove('active');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                    navToggle.setAttribute('aria-label', 'Open navigation');
-                }
-            });
-        });
+
+ 
 
     // Add scroll effect to navbar
     const nav = document.querySelector('nav');
