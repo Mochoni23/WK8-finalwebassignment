@@ -69,9 +69,8 @@ nav ul li {
 .nav-links li {
     margin: 0 0.5rem;
 }
-.nav-toggle {
-    display: none;
-}
+
+
 
 /* --- MOBILE NAVIGATION --- */
 @media (max-width: 768px) {
@@ -124,18 +123,7 @@ nav ul li {
         background: #f7b733;
         color: #fff;
     }
-    .nav-toggle {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        color: #2c3e50;
-        cursor: pointer;
-        position: absolute;
-        top: 18px;
-        right: 30px;
-        z-index: 101;
-    }
+   
 }
 
 /* --- HERO SECTION --- */
