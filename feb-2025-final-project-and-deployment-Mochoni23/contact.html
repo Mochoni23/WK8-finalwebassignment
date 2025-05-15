@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Gas - MobiGas Kenya</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MobiGas</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Order Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="getorders">
+        <h1>Order Your Gas Now</h1>
+        <p>Experience the convenience of gas delivery at your doorstep. Choose your cylinder size and delivery option, and we'll take care of the rest.</p>
+    </section>
+    
+
+    <section class="order-form">
+        <h2>Place Your Gas Order</h2>
+        <form id="gasOrderForm" class="contactForm">
+            
+            <label for="name">Full Name(Required)</label>
+            <input type="text" id="name" required oninput="validateName(this)">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required oninput="validateName(this)">
+
+            <label for="cylinder">Cylinder Size:</label>
+            <select id="cylinder" required >
+                <option value="">Select size</option>
+                <option value="6kg">6kg (KSh 1,200)</option>
+                <option value="13kg">13kg (KSh 2,400)</option>
+                <option value="50kg">50kg (KSh 8,500)</option>
+            </select>
+
+            <label for="delivery">Delivery Option:</label>
+            <select id="delivery" required>
+                <option value="">Select delivery</option>
+                <option value="express">Express (2hrs) +KSh 300</option>
+                <option value="scheduled">Scheduled (Next Day) +KSh 150</option>
+            </select>
+
+            <button type="submit">Place Order  and Pay via M-Pesa</button>
+        </form>
+    </section>
+    
+    <footer>
+        <div class="footerContainer">
+            <div class="footerSection">
+                <h3>Quick Links</h3>
+                <ul class="footerLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+            </div>
+            <div  class="footerSection">
+                <h3>Contact Info</h3>
+                <ul class="contactInfo">
+                    <li><i fas fa-map-marker-alt></i> Kahawa wendani, Nairobi Kenya</li>
+                    <li><i class="fas fa-phone"></i> +254 115 479 310</li>
+                    <li><i class="fas fa-envelope"></i>abigaelmochoni24@gmail.com</li>
+
+                </ul>
+
+            </div>
+            <div class="footerSection">
+                <h3>Follow Us</h3>
+                <p class="tagline">Redefining gas delivery since 2024</p>
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="working-hours">
+                <h3>Working Hours</h3>
+                <ul>
+                    <li><i class="fas fa-clock"></i> Mon-Sat: 8am - 8pm</li>
+                    <li><i class="fas fa-clock"></i> Sun: Closed</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+        <p>&copy; 2025 MobiGas Kenya. All rights reserved.</p>
+        <p>Designed by Abigael Mochoni</p>
+        </div>
+
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
