@@ -1,5 +1,7 @@
 Final Project and Deployment
+
 Objectives
+
 Build a fully functional web application. Apply HTML, CSS, and JavaScript concepts learned. Deploy the project using GitHub Pages, Netlify, or Vercel.
 
 Instructions
