@@ -1,14 +1,6 @@
 /* filepath: styles/main.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
+/* --- NAVIGATION --- */
 header {
-    
     color: black;
     padding: 10px 20px;
 }
@@ -23,17 +15,10 @@ header {
     animation: rainbowMove 3s linear infinite;
     flex-shrink: 0;
 }
-
-/* Optional: Animation to move the gradient */
 @keyframes rainbowMove {
-    0% {
-        background-position: 0%;
-    }
-    100% {
-        background-position: 100%;
-    }
+    0% { background-position: 0%; }
+    100% { background-position: 100%; }
 }
-
 nav {
     display: flex;
     align-items: center;
@@ -47,7 +32,6 @@ nav {
     transition: background-color 0.3s ease, transform 0.3s ease;
     min-height: 70px;
 }
-
 nav a {
     color: green;
     text-decoration: none;
@@ -60,18 +44,16 @@ nav a {
     transition: all 0.3s ease;
     font-size: 1rem;
 }
-
 nav a:hover {
     color: #000;
     transform: translateY(-3px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
-
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
-
 nav ul li {
     display: inline;
     margin-right: 15px;
@@ -84,17 +66,14 @@ nav ul li {
     padding: 0;
     list-style: none;
 }
-
 .nav-links li {
     margin: 0 0.5rem;
 }
-
-/* Hamburger hidden on desktop */
 .nav-toggle {
     display: none;
 }
 
-/* Responsive styles */
+/* --- MOBILE NAVIGATION --- */
 @media (max-width: 768px) {
     nav {
         flex-direction: row;
@@ -108,15 +87,18 @@ nav ul li {
     .nav-links {
         display: none;
         flex-direction: column;
-        background: white;
+        background: #fff;
         position: absolute;
         top: 60px;
-        right: 20px;
-        width: 180px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        border-radius: 10px;
+        right: 10px;
+        width: 85vw;
+        max-width: 260px;
+        border-radius: 12px;
         z-index: 100;
         align-items: flex-start;
+        padding: 1rem 0.5rem;
+        box-shadow: 0 8px 32px rgba(44,62,80,0.13);
+        border: 1px solid #eee;
     }
     .nav-links.active {
         display: flex;
@@ -124,6 +106,23 @@ nav ul li {
     .nav-links li {
         margin: 0.7rem 0;
         width: 100%;
+        text-align: left;
+        padding-left: 1.2rem;
+    }
+    .nav-links a {
+        display: block;
+        width: 100%;
+        color: #2c3e50;
+        background: none;
+        padding: 0.7rem 0;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        box-shadow: none;
+        transition: background 0.2s, color 0.2s;
+    }
+    .nav-links a:hover {
+        background: #f7b733;
+        color: #fff;
     }
     .nav-toggle {
         display: block;
@@ -139,7 +138,7 @@ nav ul li {
     }
 }
 
-/* HERO SECTION with content left, image right */
+/* --- HERO SECTION --- */
 .hero {
     position: relative;
     min-height: 70vh;
@@ -167,19 +166,15 @@ nav ul li {
     opacity: 0.7;
     pointer-events: none;
 }
-
-/* Ensure hero content stays above the blur */
 .hero-content, .hero-img {
     position: relative;
     z-index: 1;
 }
-
 .hero-content {
     flex: 1 1 0;
     max-width: 600px;
     z-index: 2;
 }
-
 .hero h1 {
     font-size: 3rem;
     font-weight: 800;
@@ -187,7 +182,6 @@ nav ul li {
     letter-spacing: 1.5px;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.08);
 }
-
 .hero p {
     font-size: 1.3rem;
     max-width: 500px;
@@ -195,7 +189,6 @@ nav ul li {
     line-height: 1.6;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.07);
 }
-
 .hero .cta-button {
     display: inline-block;
     background: #fff;
@@ -216,7 +209,6 @@ nav ul li {
     color: #fff;
     box-shadow: 0 4px 18px rgba(252,74,26,0.15);
 }
-
 .hero-img {
     flex: 1 1 0;
     max-width: 400px;
@@ -224,9 +216,7 @@ nav ul li {
     height: auto;
     object-fit: cover;
     margin-left: 2rem;
-   
 }
-
 @media (max-width: 900px) {
     .hero {
         flex-direction: column;
@@ -249,7 +239,6 @@ nav ul li {
         margin: 0 auto 2rem auto;
     }
 }
-
 @media (max-width: 600px) {
     .hero {
         min-height: 40vh;
@@ -268,37 +257,35 @@ nav ul li {
     }
 }
 
+/* --- SCROLL DOWN --- */
 .scroll-down {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 2rem;
-    animation: bounce 2s infinite;
-    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 2rem;
     cursor: pointer;
+    animation: bounce 1.5s infinite;
+    transition: color 0.3s;
 }
-
+.scroll-down:hover {
+    color: #f39c12;
+}
 .scroll-down-label {
-    display: block;
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-    
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 0.3rem;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
-
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0) translateX(-50%);
-    }
-    40% {
-        transform: translateY(-20px) translateX(-50%);
-    }
-    60% {
-        transform: translateY(-10px) translateX(-50%);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
 }
 
+/* --- REST OF YOUR CSS REMAINS UNCHANGED --- */
 .featured {
     margin: 20px auto;
     width: 90%;
@@ -661,39 +648,6 @@ nav ul li {
     }
     .social-links {
         justify-content: center;
-    }
-}
-.scroll-down {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem; /* Use a dot, not a comma */
-    color: orange;
-    margin-top: 2rem;
-    cursor: pointer;
-    animation: bounce 1.5s infinite;
-    transition: color 0.3s;
-}
-
-.scroll-down:hover {
-    color: black;
-}
-
-.scroll-down-label {
-    font-size: 1rem;
-    color: #333;
-    margin-top: 0.3rem;
-    letter-spacing: 1px;
-    font-weight: bold;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(15px);
     }
 }
 .working-hours{
